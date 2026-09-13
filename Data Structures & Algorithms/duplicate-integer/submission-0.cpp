@@ -1,14 +1,12 @@
 class Solution {
 public:
     bool hasDuplicate(vector<int>& nums) {
-        unordered_set<int> seen;
-
-        for (int num : nums) {
-            if (seen.count(num))
-                return true;
-            seen.insert(num);
+        unordered_set<int> s;
+        for(int i : nums){
+            s.insert(i);
         }
-
-        return false;
+if (s.size()==nums.size()) return false;
+return true;
     }
+
 };
